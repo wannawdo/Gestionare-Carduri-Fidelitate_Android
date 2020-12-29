@@ -69,6 +69,7 @@ public class AdaugareCardActivity extends AppCompatActivity {
                     Card card=buildCard();
                     intentAdaugaCard.putExtra(CARD_KEY,card);
                     setResult(RESULT_OK,intentAdaugaCard);
+
                     finish();
                 }
             }
@@ -107,7 +108,6 @@ public class AdaugareCardActivity extends AppCompatActivity {
         int idCard=Integer.parseInt(IDCard.getText().toString().trim());
         String numeMagazine=numeMagazin.getSelectedItem().toString();
         Date dataEliberareCard=dateConverter.fromString(dataEliberare.getText().toString().trim());
-
 
     return new Card(numeDetinator,sexTip,idCard,numeMagazine,dataEliberareCard);
     }
