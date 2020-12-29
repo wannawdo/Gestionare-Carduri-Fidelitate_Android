@@ -17,4 +17,18 @@
     <string name="adauga_card">Adauga card</string>
     <string name="informatii_despre_carduri">Informatii despre carduri</string>
     <string name="oferte_actuale">Oferte actuale</string>
+    <string name="feminin">feminin</string>
+    <string name="masculin">masculin</string>
+    <string name="numar_card">Numar card</string>
+    <string name="format_data">Formatul acceptat este dd/mm/yyyy</string>
+
+
+    <string-array name="SpinnerNumemagazin">
+        <item>IKEA</item>
+        <item>Carrefour</item>
+        <item>LIDL</item>
+    </string-array>
+
+
+
 </resources>
