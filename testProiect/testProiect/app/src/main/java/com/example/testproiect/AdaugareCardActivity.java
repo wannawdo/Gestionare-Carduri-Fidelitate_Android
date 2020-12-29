@@ -69,9 +69,9 @@ public class AdaugareCardActivity extends AppCompatActivity {
                     Card card=buildCard();
                     intentAdaugaCard.putExtra(CARD_KEY,card);
                     setResult(RESULT_OK,intentAdaugaCard);
-
+                    Toast.makeText(getApplicationContext(), card.toString(), Toast.LENGTH_LONG).show();
                     finish();
-                    startActivity(new Intent(AdaugareCardActivity.this, InfoCardActivity.class));
+
                 }
             }
         };
@@ -111,5 +111,6 @@ public class AdaugareCardActivity extends AppCompatActivity {
         Date dataEliberareCard=dateConverter.fromString(dataEliberare.getText().toString().trim());
 
     return new Card(numeDetinator,sexTip,idCard,numeMagazine,dataEliberareCard);
+
     }
 }

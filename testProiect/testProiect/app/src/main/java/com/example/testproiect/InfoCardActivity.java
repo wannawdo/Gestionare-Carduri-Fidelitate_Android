@@ -59,7 +59,7 @@ public class InfoCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentAddCard=new Intent(getApplicationContext(),AdaugareCardActivity.class);
-                startActivity(intentAddCard);
+                startActivityForResult(intentAddCard, ADD_CARD_REQUEST_CODE);
             }
         };
     }
