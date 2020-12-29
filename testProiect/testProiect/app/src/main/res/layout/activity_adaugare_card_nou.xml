@@ -66,9 +66,11 @@
 
     <RadioGroup
         android:id="@+id/rbSexType"
-        android:layout_width="325dp"
-        android:layout_height="52dp"
+        android:layout_width="321dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:orientation="horizontal"
         android:padding="10dp"
@@ -100,7 +102,9 @@
         android:id="@+id/etIDCard"
         android:layout_width="321dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawablePadding="16dp"
@@ -119,21 +123,26 @@
 
     <Spinner
         android:id="@+id/spinnerNumeMagazin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_width="321dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
 
         android:background="@drawable/colturi_rotunjite"
-        app:layout_constraintTop_toBottomOf="@+id/etIDCard"
-        tools:layout_editor_absoluteX="0dp"></Spinner>
+        android:ems="10"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIDCard"></Spinner>
 
     <EditText
         android:id="@+id/etDataEliberare"
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+
+        android:layout_marginTop="20dp"
+
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_credit_card_blue"
         android:drawablePadding="16dp"
@@ -155,6 +164,7 @@
         android:layout_width="347dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/buton_rotunjit"
@@ -164,11 +174,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/etDataEliberare"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/viewAlbastruInchis"
@@ -196,7 +206,7 @@
     <View
         android:id="@+id/viewSusdeschis"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
