@@ -4,27 +4,23 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName="Carduri")
-public class Card {
-    @PrimaryKey(autoGenerate = true)
-    private int id;
-    @ColumnInfo(name="Nume")
-        private String nume;
-        private String idCard;
-        private String dataEliberareCard;
+import java.io.Serializable;
+import java.util.Date;
 
-    public Card(String nume, String idCard, String dataEliberareCard) {
+public class Card implements Serializable {
+    private String nume;
+    private SexType sexType;
+    private int idCard;
+    private String numeMagazin;
+    private Date dataEliberareCard;
+
+
+    public Card(String nume, SexType sexType, int idCard, String numeMagazin, Date dataEliberareCard) {
         this.nume = nume;
+        this.sexType = sexType;
         this.idCard = idCard;
+        this.numeMagazin = numeMagazin;
         this.dataEliberareCard = dataEliberareCard;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNume() {
@@ -35,29 +31,44 @@ public class Card {
         this.nume = nume;
     }
 
-    public String getIdCard() {
+    public int getIdCard() {
         return idCard;
     }
 
-    public void setIdCard(String idCard) {
+    public void setIdCard(int idCard) {
         this.idCard = idCard;
     }
 
-    public String getDataEliberareCard() {
+    public Date getDataEliberareCard() {
         return dataEliberareCard;
     }
 
-    public void setDataEliberareCard(String dataEliberareCard) {
+    public void setDataEliberareCard(Date dataEliberareCard) {
         this.dataEliberareCard = dataEliberareCard;
+    }
+
+    public SexType getSexType() {
+        return sexType;
+    }
+
+    public void setSexType(SexType sexType) {
+        this.sexType = sexType;
+    }
+
+    public String getNumeMagazin() {
+        return numeMagazin;
+    }
+
+    public void setNumeMagazin(String numeMagazin) {
+        this.numeMagazin = numeMagazin;
     }
 
     @Override
     public String toString() {
-        return "Carddul cu " +
-                "id-ul" + id +
-                ", are numele " + nume + '\'' +
-                ", numarul " + idCard + '\'' +
-                ", si a fost eliberat in data de " + dataEliberareCard +
+        return "Cardul apartine proprietarului cu numele " + nume + '\'' +
+                ", are id-ul " + idCard +
+                ", a fost eliberat la data " + new DateConverter().toString(dataEliberareCard)+
+                " si este pentru '" + numeMagazin + '\'' +
                 '.';
     }
 }

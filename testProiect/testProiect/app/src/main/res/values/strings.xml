@@ -29,6 +29,9 @@
         <item>LIDL</item>
     </string-array>
 
+    <string name="validare_nume">Numele este invalid!</string>
+    <string name="validare_nrCard">Numarul cardului nu este valid!</string>
+    <string name="card_nou">\"Card nou: \"</string>
 
 
 </resources>

@@ -55,7 +55,19 @@
         app:layout_constraintTop_toBottomOf="@+id/viewSus" />
 
 
+    <ListView
+        android:id="@+id/lvInfoCard"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@drawable/colturi_rotunjite"
+        app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
+        app:layout_constraintEnd_toEndOf="parent"
 
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewAlbastruInchis" />
 
     <View
         android:id="@+id/viewAlbastruDeschis"
@@ -79,6 +91,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintStart_toStartOf="@+id/viewSusdeschis"
+
+        android:src="@drawable/ic_baseline_add_circle_24"
+        android:background="@drawable/colturi_rotunjite"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
