@@ -139,7 +139,7 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="@string/format_data"
-        android:inputType="date"
+        android:inputType="textPersonName"
         android:padding="20dp"
         android:textSize="14dp"
 

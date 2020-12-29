@@ -71,6 +71,7 @@ public class AdaugareCardActivity extends AppCompatActivity {
                     setResult(RESULT_OK,intentAdaugaCard);
 
                     finish();
+                    startActivity(new Intent(AdaugareCardActivity.this, InfoCardActivity.class));
                 }
             }
         };
