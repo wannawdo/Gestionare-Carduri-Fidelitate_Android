@@ -68,10 +68,10 @@
         android:id="@+id/rbSexType"
         android:layout_width="321dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/colturi_rotunjite"
+
         android:orientation="horizontal"
         android:padding="10dp"
         android:weightSum="2"
@@ -96,6 +96,7 @@
             android:layout_weight="1"
             android:background="@drawable/colturi_rotunjite"
             android:text="@string/masculin" />
+
     </RadioGroup>
 
     <EditText
@@ -104,7 +105,7 @@
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawablePadding="16dp"
@@ -141,7 +142,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
 
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_credit_card_blue"
@@ -214,4 +215,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewDataEliberareCardulet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/completati_data_de_eliberare_a_cardului"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerNumeMagazin" />
+
+    <TextView
+        android:id="@+id/textViewSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sex"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="258dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

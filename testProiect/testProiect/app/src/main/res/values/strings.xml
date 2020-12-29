@@ -32,6 +32,9 @@
     <string name="validare_nume">Numele este invalid!</string>
     <string name="validare_nrCard">Numarul cardului nu este valid!</string>
     <string name="card_nou">\"Card nou: \"</string>
+    <string name="sex">Alegeti sexul dumneavoastra</string>
+    <string name="completati_data_de_eliberare_a_cardului">Completati data de eliberare a cardului</string>
+    <string name="pentru_a_adauga_un_card_nou_apasa_click_aici">Pentru a adauga un card nou, apasa click aici:</string>
 
 
 </resources>

@@ -59,10 +59,8 @@
         android:id="@+id/lvInfoCard"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:background="@drawable/colturi_rotunjite"
         app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
         app:layout_constraintEnd_toEndOf="parent"
-
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_margin="20dp"
@@ -105,6 +103,20 @@
 
         android:src="@drawable/ic_baseline_add_circle_24"
         android:background="@drawable/colturi_rotunjite"/>
+
+    <TextView
+        android:id="@+id/textViewAdaugareCarduletNou"
+        android:layout_width="251dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/pentru_a_adauga_un_card_nou_apasa_click_aici"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
