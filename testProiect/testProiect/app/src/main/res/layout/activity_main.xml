@@ -53,29 +53,23 @@
             app:layout_constraintTop_toBottomOf="@id/imageMenu">
 
             <TextView
-                android:layout_width="306dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
                 android:layout_marginTop="3dp"
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="Magazinele partenere"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
+
                 android:paddingStart="15dp"
                 android:paddingEnd="10dp"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
+                android:textColor="#000000"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/search_icon_background"
-                android:contentDescription="@string/app_name"
-                android:padding="6dp"
-                android:src="@drawable/ic_search"
-                app:tint="@color/colorPrimary" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -226,6 +220,7 @@
                 android:layout_marginTop="36dp"
                 android:background="@drawable/trending_background"
                 android:padding="20dp"
+                android:id="@+id/layoutInfoParteneri"
                 app:layout_constraintEnd_toEndOf="@+id/layoutProfil"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/layoutWishlist"

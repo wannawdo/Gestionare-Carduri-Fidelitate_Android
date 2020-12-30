@@ -1,6 +1,7 @@
 package com.example.testproiect;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -57,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,ProfilActivity.class));
+            }
+        });
+
+        ConstraintLayout llInfoMagazine=(ConstraintLayout) findViewById(R.id.layoutInfoParteneri);
+        llInfoMagazine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,InfoMagazinePartenereActivity.class));
             }
         });
     }
