@@ -1,8 +1,4 @@
-package com.example.testproiect;
-
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+package com.example.testproiect.card;
 
 import java.io.Serializable;
 import java.util.Date;

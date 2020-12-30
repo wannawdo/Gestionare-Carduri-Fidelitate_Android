@@ -1,9 +1,11 @@
-package com.example.testproiect;
+package com.example.testproiect.oferte;
 
 import android.os.Bundle;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.testproiect.R;
 
 import java.util.ArrayList;
 

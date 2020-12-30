@@ -1,4 +1,4 @@
-package com.example.testproiect;
+package com.example.testproiect.oferte;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.testproiect.R;
+
 import java.util.List;
 
 public class OferteAdapter extends BaseAdapter {

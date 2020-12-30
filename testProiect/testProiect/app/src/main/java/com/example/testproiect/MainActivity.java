@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.example.testproiect.card.AdaugareCardActivity;
+import com.example.testproiect.card.InfoCardActivity;
+import com.example.testproiect.magazine.partenere.InfoMagazinePartenereActivity;
+import com.example.testproiect.magazine.partenere.MagazinePartenereActivity;
+import com.example.testproiect.oferte.OferteCardActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,11 +20,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearLayout llAdaugareCard=(LinearLayout)findViewById(R.id.layoutAdaugare);
-        llAdaugareCard.setOnClickListener(new View.OnClickListener() {
+        LinearLayout llMagazinePartenere=(LinearLayout)findViewById(R.id.layoutMagazine);
+        llMagazinePartenere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,AdaugareCardActivity.class));
+                startActivity(new Intent(MainActivity.this, MagazinePartenereActivity.class));
+            }
+        });
+
+        LinearLayout llWishlist=(LinearLayout)findViewById(R.id.layoutWishlist);
+        llWishlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, InfoMagazinePartenereActivity.class));
             }
         });
 
@@ -26,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         llInfoCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,InfoCardActivity.class));
+                startActivity(new Intent(MainActivity.this, InfoCardActivity.class));
             }
         });
 
@@ -34,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         llOferteCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,OferteCardActivity.class));
+                startActivity(new Intent(MainActivity.this, OferteCardActivity.class));
             }
         });
 

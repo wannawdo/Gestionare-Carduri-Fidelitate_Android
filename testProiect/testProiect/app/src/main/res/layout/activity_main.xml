@@ -43,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
+            android:id="@+id/layoutMagazine"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="10dp"
@@ -51,19 +52,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageMenu">
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="40dp"
+            <TextView
+                android:layout_width="306dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="Search_elements"
+                android:hint="Magazinele partenere"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:paddingStart="15dp"
-                android:paddingEnd="15dp"
+                android:paddingEnd="10dp"
+                android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 android:textSize="16dp"
-                />
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="40dp"
@@ -91,7 +94,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/layoutAdaugare"
+                android:id="@+id/layoutWishlist"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
@@ -109,13 +112,13 @@
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/adaugare" />
+                    android:src="@drawable/ic_baseline_list_alt_24" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/adaugare_card_nou"
+                    android:text="@string/lista_dorinte"
                     android:textColor="@color/colorAccent"
                     android:textSize="12dp"
                     android:textStyle="bold" />
@@ -132,7 +135,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
-                app:layout_constraintStart_toEndOf="@id/layoutAdaugare"
+                app:layout_constraintStart_toEndOf="@id/layoutWishlist"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
@@ -140,7 +143,7 @@
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/info" />
+                    android:src="@drawable/ic_baseline_info_24" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -164,7 +167,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutAdaugare">
+                app:layout_constraintTop_toBottomOf="@id/layoutWishlist">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -218,14 +221,14 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="320dp"
+                android:layout_height="102dp"
                 android:layout_marginTop="36dp"
                 android:background="@drawable/trending_background"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="@+id/layoutProfil"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/layoutAdaugare"
+                app:layout_constraintStart_toStartOf="@+id/layoutWishlist"
                 app:layout_constraintTop_toBottomOf="@+id/layoutOferte">
 
                 <TextView
@@ -238,8 +241,10 @@
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.506" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -250,8 +255,8 @@
 
     <View
         android:id="@+id/viewAlbastruDeschis"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_width="409dp"
+        android:layout_height="56dp"
         android:background="@drawable/wavesus_deschis"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

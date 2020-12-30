@@ -11,7 +11,7 @@
     <string name="informatii_card">Informatii card</string>
     <string name="oferte">Oferte</string>
     <string name="profil">Profil</string>
-    <string name="text_gardient">Bagam o vrajeala aici sa arate bine si sa ne reprezinte proiectul</string>
+    <string name="text_gardient">Informatii despre parteneri</string>
     <string name="datele_mele">Datele mele</string>
     <string name="data_eliberare_card">Data eliberare card</string>
     <string name="adauga_card">Adauga card</string>
@@ -35,6 +35,7 @@
     <string name="sex">Alegeti sexul dumneavoastra</string>
     <string name="completati_data_de_eliberare_a_cardului">Completati data de eliberare a cardului</string>
     <string name="pentru_a_adauga_un_card_nou_apasa_click_aici">Pentru a adauga un card nou, apasa click aici:</string>
+    <string name="lista_dorinte">Lista de dorinte</string>
 
 
 </resources>

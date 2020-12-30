@@ -1,4 +1,4 @@
-package com.example.testproiect;
+package com.example.testproiect.oferte;
 
 import java.io.Serializable;
 

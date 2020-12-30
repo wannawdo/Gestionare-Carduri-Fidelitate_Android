@@ -1,24 +1,19 @@
-package com.example.testproiect;
+package com.example.testproiect.card;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Calendar;
+import com.example.testproiect.R;
+
 import java.util.Date;
 
 public class AdaugareCardActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.testproiect;
+package com.example.testproiect.card;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
