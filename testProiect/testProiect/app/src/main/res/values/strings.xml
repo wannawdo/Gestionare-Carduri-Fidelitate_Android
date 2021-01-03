@@ -38,6 +38,9 @@
     <string name="lista_dorinte">Lista de dorinte</string>
     <string name="proiect_realizat_de">Proiect realizat de</string>
     <string name="florea_laura">Florea Laura</string>
+    <string name="site_web_lidl">Site web LIDL</string>
+    <string name="site_web_carrefour">Site web Carrefour</string>
+    <string name="site_web_ikea">Site web IKEA</string>
 
 
 </resources>

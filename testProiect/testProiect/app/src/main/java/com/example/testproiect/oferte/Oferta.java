@@ -5,12 +5,12 @@ import java.io.Serializable;
 public class Oferta implements Serializable {
     private String denumire;
     private String text;
-    private int image;
+    private int valabilitate; // zile
 
-    public Oferta(String denumire, String text, int img) {
+    public Oferta(String denumire, String text, int valabilitate) {
         this.denumire = denumire;
         this.text = text;
-        this.image=img;
+        this.valabilitate = valabilitate;
     }
 
     public String getDenumire() {
@@ -28,15 +28,19 @@ public class Oferta implements Serializable {
     public void setText(String text) {
         this.text = text;
     }
-    public int getImage() {
-        return image;
+
+    public int getValabilitate() {
+        return valabilitate;
     }
-    public void setImage(int image) {
-        this.image = image;
+
+    public void setValabilitate(int valabilitate) {
+        this.valabilitate = valabilitate;
     }
+
     @Override
     public String toString() {
-        return  denumire + '\'' +
-                ". " + text + '\'' ;
+        return   "Oferta"+denumire +
+                " " + text + '\'' +
+                " este valabila " + valabilitate + " zile ";
     }
 }

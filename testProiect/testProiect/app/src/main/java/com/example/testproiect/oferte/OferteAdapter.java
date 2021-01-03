@@ -40,13 +40,13 @@ public class OferteAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(ctx);
         View v = inflater.inflate(R.layout.custom_adapter_oferte, parent,false);
-        ImageView img=v.findViewById(R.id.imageViewAdapterOferte);
         TextView textTitlu=v.findViewById(R.id.titluOferta);
         TextView textOf=v.findViewById(R.id.textOferta);
+        TextView textValab=v.findViewById(R.id.tvValabilitateOferta);
         Oferta oferta=(Oferta)getItem(position);
-        img.setImageResource(oferta.getImage());
         textTitlu.setText(""+oferta.getDenumire());
         textOf.setText(""+oferta.getText());
+        textValab.setText(""+oferta.getValabilitate());
         return v;
 
     }

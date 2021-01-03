@@ -1,10 +1,16 @@
 package com.example.testproiect.magazine.partenere;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.testproiect.MainActivity;
 import com.example.testproiect.R;
 import com.example.testproiect.oferte.Oferta;
 
@@ -34,5 +40,10 @@ public class MagazinePartenereActivity extends AppCompatActivity {
     private void addMagazineAdapter(){
         MagazinAdapter adapter=new MagazinAdapter(getApplication(), magazin);
         lvMagazin.setAdapter(adapter);
+    }
+
+
+    public void ActivitateSiteuri(View view) {
+        startActivity(new Intent(MagazinePartenereActivity.this, InfoMagazinePartenereActivity.class));
     }
 }

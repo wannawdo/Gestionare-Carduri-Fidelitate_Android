@@ -28,13 +28,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewSus3" />
 
+
+    <Button
+        android:id="@+id/buttonIKEA"
+        android:layout_width="206dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/buton_rotunjit"
+        android:onClick="accesareSiteIKEA"
+        android:text="@string/site_web_ikea"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCarrefour"
+        android:layout_width="206dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/buton_rotunjit"
+        android:onClick="accesareSiteCarrefour"
+        android:text="@string/site_web_carrefour"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIKEA" />
+
+    <Button
+        android:id="@+id/buttonLidl"
+        android:layout_width="206dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buton_rotunjit"
+        android:onClick="accesareSiteLIDL"
+        android:text="@string/site_web_lidl"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCarrefour" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="357dp"
+        android:layout_height="388dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSusdeschis2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <View
         android:id="@+id/viewAlbastruDeschis2"
         android:layout_width="0dp"
         android:layout_height="70dp"
         android:background="@drawable/wavesus_deschis"
         app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis2"
-
         app:layout_constraintStart_toStartOf="parent" />
 
     <View

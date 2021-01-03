@@ -10,7 +10,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-40dp">
 
         <View
             android:id="@+id/viewSus3"
@@ -33,16 +35,33 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewSus3" />
+
+
         <ListView
             android:id="@+id/listViewSiteMagazine"
-            android:layout_width="400dp"
-            android:layout_height="500dp"
+            android:layout_width="357dp"
+            android:layout_height="376dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.822" />
+            app:layout_constraintVertical_bias="0.43" />
+
+        <Button
+            android:id="@+id/buttonInfoMagazine"
+            android:layout_width="258dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/buton_rotunjit"
+            android:onClick="ActivitateSiteuri"
+            android:text="Vezi site-uri magazine"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listViewSiteMagazine" />
 
         <View
             android:id="@+id/viewAlbastruDeschis2"
@@ -64,6 +83,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
