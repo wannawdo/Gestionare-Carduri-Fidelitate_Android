@@ -51,7 +51,7 @@ public class LogInActivity extends AppCompatActivity {
                 if (mFirebaseUser != null) {
                     moveToHomeActivity(mFirebaseUser);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Please login", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Te rugam sa te loghezi", Toast.LENGTH_LONG).show();
                 }
                 }
 
@@ -60,25 +60,24 @@ public class LogInActivity extends AppCompatActivity {
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = user.getText().toString();
-                String pwd = parola.getText().toString();
-                if (email.isEmpty()) {
-                    user.setError(getString(R.string.validare_user));
-                    user.requestFocus();
-                } else if (pwd.isEmpty()) {
-                    parola.setError(getString(R.string.validare_parola));
-                    parola.requestFocus();
-                } else if (email.isEmpty() && pwd.isEmpty()) {
+                String user = LogInActivity.this.user.getText().toString();
+                String parola = LogInActivity.this.parola.getText().toString();
+                if (user.isEmpty()) {
+                    LogInActivity.this.user.setError(getString(R.string.validare_user));
+                    LogInActivity.this.user.requestFocus();
+                } else if (parola.isEmpty()) {
+                    LogInActivity.this.parola.setError(getString(R.string.validare_parola));
+                    LogInActivity.this.parola.requestFocus();
+                } else if (user.isEmpty() && parola.isEmpty()) {
                     Toast.makeText(LogInActivity.this, R.string.validare_campuri, Toast.LENGTH_SHORT).show();
-                } else if (!(email.isEmpty() && pwd.isEmpty())) {
-                    mFirebaseAuth.signInWithEmailAndPassword(email, pwd).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
+                } else if (!(user.isEmpty() && parola.isEmpty())) {
+                    mFirebaseAuth.signInWithEmailAndPassword(user, parola).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LogInActivity.this, R.string.eroare_autentificare, Toast.LENGTH_SHORT).show();
                             } else {
-                                Intent intToHome = new Intent(LogInActivity.this, MainActivity.class);
-                                startActivity(intToHome);
+                                moveToHomeActivity(task.getResult().getUser());
                             }
                         }
                     });
@@ -123,7 +122,7 @@ public class LogInActivity extends AppCompatActivity {
                         User userDetail = snapshot.getValue(User.class);
                         String name = userDetail.getNume();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                        Toast.makeText(LogInActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LogInActivity.this,"V-ati logat cu succes!", Toast.LENGTH_SHORT).show();
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         i.putExtra("name", name);
                         startActivity(i);
