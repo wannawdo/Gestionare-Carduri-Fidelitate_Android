@@ -5,7 +5,7 @@
     <string name="nu_ai_un_cont_creeaza_l_acum">Nu ai un cont? Creeaza-l acum!</string>
     <string name="completeaza_datele_pentru_a_crea_un_nou_cont">Completeaza datele de mai jos pentru a crea un cont nou</string>
     <string name="ai_deja_un_cont_acceseaza_l_acum">Ai deja un cont? Acceseaza-l acum!</string>
-    <string name="buna">Bine ai revenit!</string>
+    <string name="buna">Hei %1$s %2$s!</string>
     <string name="text_buton_creare_cont">Contul a fost creat cu succes!</string>
     <string name="adaugare_card_nou">Adaugare card nou</string>
     <string name="informatii_card">Informatii card</string>
@@ -51,9 +51,15 @@
     <string name="validare_user">Te rugam sa introduci userul</string>
     <string name="validare_parola">Te rugam sa introduci parola</string>
     <string name="validare_campuri">Campurile sunt goale!</string>
-    <string name="eroare_autentificare">A aparut o eroare la logare. Va rugams a reincercati.</string>
+    <string name="eroare_autentificare">A aparut o eroare la logare. Va rugam sa reincercati.</string>
     <string name="eroare">Oops! A aparut o eroare!</string>
     <string name="adauga_produs_eroare">Te rugam sa adaugi un produs</string>
     <string name="adauga_pret_produs_eroare">Pretul nu este valid</string>
+    <string name="errMail">Introduceti emailul</string>
+    <string name="errNume">Introduceti numele</string>
+    <string name="errUsername">Introduceti username-ul</string>
+    <string name="errParola">Introduceti parola</string>
+    <string name="errInregistrare">Nu s-a putut realiza inregistrarea. Incercati din nou!</string>
+    <string name="user_button">User</string>
 
 </resources>

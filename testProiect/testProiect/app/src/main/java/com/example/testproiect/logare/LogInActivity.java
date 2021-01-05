@@ -18,12 +18,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LogInActivity extends AppCompatActivity {
     EditText user, parola;
     Button btnLogIn;
     TextView tvRegister;
+
     FirebaseAuth mFirebaseAuth;
+    FirebaseDatabase firebaseDatabase;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
@@ -32,24 +38,23 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mFirebaseAuth = FirebaseAuth.getInstance();
-        user = findViewById(R.id.etUser);
-        parola = findViewById(R.id.etParola);
-        btnLogIn = findViewById(R.id.buttonLogIn);
-        tvRegister = findViewById(R.id.tvCreeazaCont);
+        initializareComponente();
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mFirebaseAuth=FirebaseAuth.getInstance();
+
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                FirebaseUser mFirebaseUser = firebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
-                    Toast.makeText(LogInActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(LogInActivity.this, MainActivity.class);
-                    startActivity(i);
+                    moveToHomeActivity(mFirebaseUser);
                 } else {
-                    Toast.makeText(LogInActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Please login", Toast.LENGTH_LONG).show();
                 }
-            }
+                }
+
         };
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
@@ -88,17 +93,48 @@ public class LogInActivity extends AppCompatActivity {
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intSignUp = new Intent(LogInActivity.this, MainActivity.class);
+                Intent intSignUp = new Intent(LogInActivity.this, RegisterActivity.class);
                 startActivity(intSignUp);
             }
         });
     }
+
+
+    public void initializareComponente(){
+        user = findViewById(R.id.etUser);
+        parola = findViewById(R.id.etParola);
+        btnLogIn = findViewById(R.id.buttonLogIn);
+        tvRegister = findViewById(R.id.tvCreeazaCont);
+    }
+
+
         @Override
         protected void onStart() {
             super.onStart();
             mFirebaseAuth.addAuthStateListener(mAuthStateListener);
         }
 
+    private void moveToHomeActivity(FirebaseUser mFirebaseUser) {
 
+        firebaseDatabase.getReference().child(mFirebaseUser.getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        User userDetail = snapshot.getValue(User.class);
+                        String name = userDetail.getNume();
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        Toast.makeText(LogInActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        i.putExtra("name", name);
+                        startActivity(i);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+
+                    }
+                });
+    }
     }
 

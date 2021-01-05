@@ -22,14 +22,12 @@
         <activity android:name=".logare.LogInActivity">
 
         </activity>
-        <activity android:name=".logare.RegisterActivity">
-
-        </activity>
+        <activity android:name=".logare.RegisterActivity"></activity>
         <activity android:name=".oferte.OferteCardActivity"></activity>
         <activity android:name=".card.InfoCardActivity">
 
         </activity>
-        <activity android:name=".logare.ProfilActivity"></activity>
+        <activity android:name=".profil.ProfilActivity"></activity>
         <activity android:name=".card.AdaugareCardActivity"></activity>
         <activity android:name=".magazine.partenere.InfoMagazinePartenereActivity"></activity>
         <activity android:name=".magazine.partenere.MagazinePartenereActivity"></activity>
