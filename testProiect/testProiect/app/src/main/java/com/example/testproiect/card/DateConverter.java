@@ -1,5 +1,7 @@
 package com.example.testproiect.card;
 
+import androidx.room.TypeConverter;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

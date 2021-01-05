@@ -17,11 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InfoCardActivity extends AppCompatActivity {
-        public static final int ADD_CARD_REQUEST_CODE=210;
+    public static final int ADD_CARD_REQUEST_CODE=210;
 
-        private ListView lvCarduri;
-        private List<Card> carduri=new ArrayList<>();
-        private FloatingActionButton fabAddCard;
+    private ListView lvCarduri;
+    private List<Card> carduri=new ArrayList<>();
+    private FloatingActionButton fabAddCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,8 @@ public class InfoCardActivity extends AppCompatActivity {
     }
 
     private void initializareComponente(){
-    fabAddCard=findViewById(R.id.floatingActionButton);
-    lvCarduri=findViewById(R.id.lvInfoCard);
+        fabAddCard=findViewById(R.id.floatingActionButton);
+        lvCarduri=findViewById(R.id.lvInfoCard);
     }
 
     private View.OnClickListener addCardEvent(){

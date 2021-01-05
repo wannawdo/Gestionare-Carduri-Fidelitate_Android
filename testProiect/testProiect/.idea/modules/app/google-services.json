@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "522120279138",
+    "project_id": "gesionarecardurifidelitate",
+    "storage_bucket": "gesionarecardurifidelitate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522120279138:android:ef7b8db38d1bda1af5cd3b",
+        "android_client_info": {
+          "package_name": "com.example.testproiect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522120279138-ah0chgb3ih3onmce779jknl0d2j1pmtb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.testproiect",
+            "certificate_hash": "35aeb474878e5487d7be358065dc539964a12404"
+          }
+        },
+        {
+          "client_id": "522120279138-5oqg6mj7p71c73o6kbrsq9gocnj2o6e7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiZXcsCU-3LxcZ05werPjWqgRGQj3FYT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522120279138-5oqg6mj7p71c73o6kbrsq9gocnj2o6e7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -30,6 +30,7 @@
             android:id="@+id/imageMenu"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:clickable="true"
             android:contentDescription="@string/app_name"
             android:layout_marginEnd="15dp"
             android:src="@drawable/ic_menu"

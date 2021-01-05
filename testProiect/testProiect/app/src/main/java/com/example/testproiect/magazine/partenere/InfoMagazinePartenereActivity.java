@@ -29,7 +29,7 @@ public class InfoMagazinePartenereActivity extends AppCompatActivity {
 
     public void accesareSiteLIDL(View view) {
         WebView wb=findViewById(R.id.webView);
-        wb.loadUrl("https://www.lidl.com/");
+        wb.loadUrl("https://www.lidl.ro/");
         wb.setWebViewClient(new WebViewClient());
     }
 }

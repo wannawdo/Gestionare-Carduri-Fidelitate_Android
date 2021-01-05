@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">testProiect</string>
+    <string name="app_name">Gestionare Carduri Fidelitate</string>
     <string name="intra_in_cont">Intra in cont</string>
     <string name="introdu_datele_pentru_a_intra_in_cont">Introdu datele pentru a accesa contul</string>
     <string name="nu_ai_un_cont_creeaza_l_acum">Nu ai un cont? Creeaza-l acum!</string>
@@ -41,6 +41,19 @@
     <string name="site_web_lidl">Site web LIDL</string>
     <string name="site_web_carrefour">Site web Carrefour</string>
     <string name="site_web_ikea">Site web IKEA</string>
-
+    <string name="adauga_produs">Adauga produs</string>
+    <string name="denumire_produs">Denumire produs</string>
+    <string name="denumire_magazin">Denumire magazin</string>
+    <string name="pret_produs">Pret produs</string>
+    <string name="default_pret_value">-</string>
+    <string name="apasa_aici_pentru_a_adauga_un_nou_produs_in_lista">Apasa aici pentru a adauga un nou produs in lista:</string>
+    <string name="lista_ta_de_produse_dorite">Lista ta de produse dorite</string>
+    <string name="validare_user">Te rugam sa introduci userul</string>
+    <string name="validare_parola">Te rugam sa introduci parola</string>
+    <string name="validare_campuri">Campurile sunt goale!</string>
+    <string name="eroare_autentificare">A aparut o eroare la logare. Va rugams a reincercati.</string>
+    <string name="eroare">Oops! A aparut o eroare!</string>
+    <string name="adauga_produs_eroare">Te rugam sa adaugi un produs</string>
+    <string name="adauga_pret_produs_eroare">Pretul nu este valid</string>
 
 </resources>

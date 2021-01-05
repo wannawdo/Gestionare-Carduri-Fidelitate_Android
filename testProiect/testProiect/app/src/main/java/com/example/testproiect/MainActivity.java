@@ -6,14 +6,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.testproiect.card.AdaugareCardActivity;
 import com.example.testproiect.card.InfoCardActivity;
+import com.example.testproiect.logare.ProfilActivity;
 import com.example.testproiect.magazine.partenere.InfoMagazinePartenereActivity;
 import com.example.testproiect.magazine.partenere.MagazinePartenereActivity;
 import com.example.testproiect.oferte.OferteCardActivity;
+import com.example.testproiect.wishlist.WishlistActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView img=findViewById(R.id.imageMenu);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
+            }
+        });
 
         LinearLayout llMagazinePartenere=(LinearLayout)findViewById(R.id.layoutMagazine);
         llMagazinePartenere.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         llWishlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, InfoMagazinePartenereActivity.class));
+                startActivity(new Intent(MainActivity.this, WishlistActivity.class));
             }
         });
 
@@ -58,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         llProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ProfilActivity.class));
+                startActivity(new Intent(MainActivity.this, ProfilActivity.class));
             }
         });
 

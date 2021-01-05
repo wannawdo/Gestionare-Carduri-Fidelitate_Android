@@ -105,7 +105,7 @@ public class AdaugareCardActivity extends AppCompatActivity {
         String numeMagazine=numeMagazin.getSelectedItem().toString();
         Date dataEliberareCard=dateConverter.fromString(dataEliberare.getText().toString().trim());
 
-    return new Card(numeDetinator,sexTip,idCard,numeMagazine,dataEliberareCard);
+        return new Card(numeDetinator,sexTip,idCard,numeMagazine,dataEliberareCard);
 
     }
 }

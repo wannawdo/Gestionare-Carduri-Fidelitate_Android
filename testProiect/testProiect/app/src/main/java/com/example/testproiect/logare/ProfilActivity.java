@@ -1,8 +1,10 @@
-package com.example.testproiect;
+package com.example.testproiect.logare;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.testproiect.R;
 
 public class ProfilActivity extends AppCompatActivity {
     @Override

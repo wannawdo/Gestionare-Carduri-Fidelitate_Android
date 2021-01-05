@@ -79,17 +79,19 @@
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="357dp"
-        android:layout_height="388dp"
+        android:layout_width="370dp"
+        android:layout_height="407dp"
         android:layout_marginBottom="92dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSusdeschis2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLidl"
+        app:layout_constraintVertical_bias="1.0" />
 
     <View
         android:id="@+id/viewAlbastruDeschis2"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="30dp"
         android:background="@drawable/wavesus_deschis"
         app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis2"
         app:layout_constraintStart_toStartOf="parent" />

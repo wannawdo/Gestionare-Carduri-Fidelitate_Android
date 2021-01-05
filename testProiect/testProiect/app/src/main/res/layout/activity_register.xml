@@ -66,31 +66,11 @@
         app:layout_goneMarginTop="40dp" />
 
     <EditText
-        android:id="@+id/etAdresa"
-        android:layout_width="321dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/colturi_rotunjite"
-        android:drawableStart="@drawable/ic_baseline_map_24"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Adresa"
-        android:inputType="textPersonName"
-        android:padding="20dp"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNume"
-        app:layout_goneMarginTop="40dp" />
-
-    <EditText
         android:id="@+id/etEMail"
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_email_24"
@@ -102,27 +82,7 @@
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etAdresa"
-        app:layout_goneMarginTop="40dp" />
-
-    <EditText
-        android:id="@+id/etNrTelefon"
-        android:layout_width="321dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/colturi_rotunjite"
-        android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Numar de telefon"
-        android:inputType="textPersonName"
-        android:padding="20dp"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEMail"
+        app:layout_constraintTop_toBottomOf="@+id/etNume"
         app:layout_goneMarginTop="40dp" />
 
     <EditText
@@ -130,7 +90,7 @@
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_person_24"
@@ -162,7 +122,7 @@
         android:layout_width="321dp"
         android:layout_height="58dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_parola"
@@ -174,7 +134,7 @@
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNrTelefon" />
+        app:layout_constraintTop_toBottomOf="@+id/etEMail" />
 
     <View
         android:id="@+id/viewAlbastruDeschis"
@@ -199,32 +159,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/etRepetaParola"
-        android:layout_width="320dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/colturi_rotunjite"
-        android:drawableStart="@drawable/ic_parola"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Repeta parola"
-        android:inputType="textPassword"
-        android:padding="20dp"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etParola" />
-
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="347dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/buton_rotunjit"
         android:text="Creeaza cont nou"
@@ -232,8 +172,9 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRepetaParola" />
+        app:layout_constraintTop_toBottomOf="@+id/etParola" />
 
     <TextView
         android:id="@+id/tvRegister"
