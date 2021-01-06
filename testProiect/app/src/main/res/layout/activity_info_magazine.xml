@@ -10,7 +10,7 @@
     <View
         android:id="@+id/viewSus3"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="30dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -20,7 +20,7 @@
     <View
         android:id="@+id/viewAlbastruInchis3"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
 
         android:background="@drawable/wavesus"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,7 @@
         android:id="@+id/buttonIKEA"
         android:layout_width="206dp"
         android:layout_height="34dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/buton_rotunjit"
         android:onClick="accesareSiteIKEA"
         android:text="@string/site_web_ikea"
@@ -79,9 +79,9 @@
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="370dp"
-        android:layout_height="407dp"
-        android:layout_marginBottom="92dp"
+        android:layout_width="389dp"
+        android:layout_height="489dp"
+        android:layout_marginBottom="55dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSusdeschis2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,7 @@
     <View
         android:id="@+id/viewSusdeschis2"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="20dp"
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

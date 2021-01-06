@@ -59,6 +59,7 @@
         android:id="@+id/lvInfoCard"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"

@@ -61,10 +61,10 @@ public class Card implements Serializable {
 
     @Override
     public String toString() {
-        return "Cardul apartine proprietarului cu numele " + nume + '\'' +
+        return "Cardul apartine proprietarului cu numele " + nume +
                 ", are id-ul " + idCard +
                 ", a fost eliberat la data " + new DateConverter().toString(dataEliberareCard)+
-                " si este pentru '" + numeMagazin + '\'' +
+                " si este pentru " + numeMagazin +
                 '.';
     }
 }
