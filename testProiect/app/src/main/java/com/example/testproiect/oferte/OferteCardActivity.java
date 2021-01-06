@@ -18,7 +18,7 @@ import java.util.concurrent.Callable;
 
 
 public class OferteCardActivity extends AppCompatActivity {
-    private static String URL_JSON="https://pastebin.com/raw/1dRnz8HR";
+    private static String URL_JSON="https://jsonkeeper.com/b/9O6D";
 
     private ListView lvOferte;
     private ArrayList<Oferta> oferte=new ArrayList<>();
@@ -30,28 +30,22 @@ public class OferteCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vizualizare_oferte_card);
+        lvOferte=findViewById(R.id.listView);
+//        oferte.add(new Oferta("Black Friday", "Discount 15% la orice electrocasnice!",3));
+//        oferte.add(new Oferta("Craciun","30% reducere la cozonac!",7));
+//        oferte.add(new Oferta("Paste","Oua proaspete la doar 14 lei si 99 de bani.",30));
+//        oferte.add(new Oferta("1 Decembrie","Reduceri de pana la 70% la articolele cu bulina rosie.",14));
+//        oferte.add(new Oferta("Ziua sporturilor","50% reducere la toate bicicletele.",5));
 
-        oferte.add(new Oferta("Black Friday", "Discount 15% la orice electrocasnice!",3));
-        oferte.add(new Oferta("Craciun","30% reducere la cozonac!",7));
-        oferte.add(new Oferta("Paste","Oua proaspete la doar 14 lei si 99 de bani.",30));
-        oferte.add(new Oferta("1 Decembrie","Reduceri de pana la 70% la articolele cu bulina rosie.",14));
-        oferte.add(new Oferta("Ziua sporturilor","50% reducere la toate bicicletele.",5));
 
-
-
-       lvOferte=findViewById(R.id.listView);
         addOferteAdapter();
         getOferteJSON();
     }
 
     private void getOferteJSON(){
-        //definim un obiect de tip Callable pe care dorim sa-l procesam pe un alt fir de executie (RunnableTask)
-        //HttpManager implementeaza aceasta interfata.
         Callable<String> asyncOperation = new ManagerHttp(URL_JSON);
-        //definim Callback-ul, adica zona din activitatea unde dorim sa receptionam rezultatul procesarii paralele
-        //realizata de Callable
         Callback<String> mainThreadOperation = receiveCardFromHttp();
-        //Apelam asyncTaskRunner cu operation asincrona si zona de cod din activitate unde dorim sa primim raspunsul
+
         asyncTaskRunner.executeAsync(asyncOperation, mainThreadOperation);
     }
 
@@ -60,20 +54,20 @@ public class OferteCardActivity extends AppCompatActivity {
             @Override
             public void runResultOnUiThread(String result) {
                 Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
-                //apelam parsatorul de json, iar rezultatul obtinut il adaugam in lista de obiecte BankAccount
-                //existenta la nivelul activitati
                 oferte.addAll(OferteJsonParser.fromJson(result));
-                //avand in vedere ca lista de obiecte este modificata la linia de mai sus,
-                // este necesar sa notificam adapterul de acest lucru astfel incat obiectele noi
-                //sa fie incarcate in ListView
-                addOferteAdapter();
+
+                notifyAdapter();
             }
         };
     }
 
     private void addOferteAdapter(){
-        OferteAdapter adapter=new OferteAdapter(getApplication(), oferte);
+        OferteAdapter adapter=new OferteAdapter(getApplicationContext(),R.layout.custom_adapter_oferte, oferte, getLayoutInflater());
         lvOferte.setAdapter(adapter);
+    }
+    private void notifyAdapter(){
+        ArrayAdapter adapter=(ArrayAdapter)lvOferte.getAdapter();
+        adapter.notifyDataSetChanged();
     }
 
 }

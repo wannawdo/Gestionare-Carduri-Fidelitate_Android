@@ -1,5 +1,6 @@
 package com.example.testproiect.profil;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ public class ProfilActivity extends AppCompatActivity {
     private EditText etNume, etPrenume;
     private RadioGroup rgSextype;
     private Button btnSalvare;
+    private Button btnInfoProfil;
 
     //obiect utilizat pentru a reprezenta un fisier de preferinte incarcat in memorie
     private SharedPreferences preferences;
@@ -38,10 +40,18 @@ public class ProfilActivity extends AppCompatActivity {
         etPrenume=findViewById(R.id.etPrenume);
         rgSextype=findViewById(R.id.rgSexType);
         btnSalvare=findViewById(R.id.buttonSalvare);
+        btnInfoProfil=findViewById(R.id.buttonVizualizareDateProfil);
 
         preferences = getSharedPreferences(PROFIL_SHARED_PREF, MODE_PRIVATE);
         btnSalvare.setOnClickListener(saveProfileDetailsEventListener());
         getProfileDetailsFromSharedPreference();
+        btnInfoProfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent veziProfil = new Intent(ProfilActivity.this, InfoProfilActivity.class);
+                startActivity(veziProfil);
+            }
+        });
     }
 
     private void getProfileDetailsFromSharedPreference() {

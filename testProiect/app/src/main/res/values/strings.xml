@@ -63,4 +63,6 @@
     <string name="user_button">User</string>
     <string name="nume_parola_gresita">Nume sau parola gresita!</string>
     <string name="te_rugam_sa_te_loggezi">Te rugam sa te loghezi</string>
+    <string name="apasa_aici_pentru_a_vizualiza_datele_profilului_tau">Apasa aici pentru a vizualiza datele profilului tau</string>
+    <string name="apasa_aici_pentru_a_te_deconecta">Apasa aici pentru a te deconecta</string>
 </resources>

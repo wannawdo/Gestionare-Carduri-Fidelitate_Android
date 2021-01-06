@@ -38,6 +38,7 @@
         <activity android:name=".wishlist.AddWishlistActivity"></activity>
         <activity android:name=".grafic.GraficActivity"></activity>
         <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".profil.InfoProfilActivity"></activity>
     </application>
 
 </manifest>
