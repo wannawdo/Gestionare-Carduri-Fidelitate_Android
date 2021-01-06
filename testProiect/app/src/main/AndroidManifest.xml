@@ -22,7 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".logare.RegisterActivity"></activity>
+        <activity android:name=".logare.RegisterActivity">
+
+        </activity>
+
         <activity android:name=".oferte.OferteCardActivity"></activity>
         <activity android:name=".card.InfoCardActivity">
 
@@ -32,9 +35,8 @@
         <activity android:name=".magazine.partenere.InfoMagazinePartenereActivity"></activity>
         <activity android:name=".magazine.partenere.MagazinePartenereActivity"></activity>
         <activity android:name=".wishlist.WishlistActivity"></activity>
-        <activity android:name=".wishlist.AddWishlistActivity">
-
-        </activity>
+        <activity android:name=".wishlist.AddWishlistActivity"></activity>
+        <activity android:name=".grafic.GraficActivity"></activity>
         <activity android:name=".AboutActivity"></activity>
     </application>
 

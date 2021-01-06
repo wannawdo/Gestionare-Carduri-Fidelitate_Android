@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.testproiect.card.InfoCardActivity;
+import com.example.testproiect.grafic.GraficActivity;
 import com.example.testproiect.profil.ProfilActivity;
 import com.example.testproiect.magazine.partenere.InfoMagazinePartenereActivity;
 import com.example.testproiect.magazine.partenere.MagazinePartenereActivity;
@@ -92,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ConstraintLayout llInfoMagazine=(ConstraintLayout) findViewById(R.id.layoutInfoParteneri);
-        llInfoMagazine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,InfoMagazinePartenereActivity.class));
-            }
-        });
+//        ConstraintLayout llInfoMagazine=(ConstraintLayout) findViewById(R.id.layoutGrafic);
+//        llInfoMagazine.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, GraficActivity.class));
+//            }
+//        });
 
         TextView tvSiteMagazine=findViewById(R.id.tvSiteMagazinePartenere);
         tvSiteMagazine.setOnClickListener(new View.OnClickListener() {

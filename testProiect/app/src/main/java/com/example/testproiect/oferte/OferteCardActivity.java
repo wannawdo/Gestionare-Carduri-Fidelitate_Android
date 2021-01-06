@@ -38,9 +38,8 @@ public class OferteCardActivity extends AppCompatActivity {
         oferte.add(new Oferta("Ziua sporturilor","50% reducere la toate bicicletele.",5));
 
 
-        OferteAdapter oferteAdapter=new OferteAdapter(this, oferte);
-        lvOferte=findViewById(R.id.listView);
-        lvOferte.setAdapter(oferteAdapter);
+
+       lvOferte=findViewById(R.id.listView);
         addOferteAdapter();
         getOferteJSON();
     }

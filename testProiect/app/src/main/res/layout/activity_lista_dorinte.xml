@@ -50,6 +50,7 @@
             android:background="@drawable/wavesus_deschis"
             app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis2"
 
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ListView
@@ -58,12 +59,15 @@
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
             android:divider="@android:color/transparent"
             android:dividerHeight="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis2"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGrafic"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewAlbastruInchis3" />
+            app:layout_constraintTop_toBottomOf="@+id/viewAlbastruInchis3"
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_add_wishlist"
@@ -99,6 +103,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/fab_add_wishlist"
             app:layout_constraintHorizontal_bias="0.846"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonGrafic"
+            android:layout_width="258dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/buton_rotunjit"
+            android:text="Vizualizare grafic magazine"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

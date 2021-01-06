@@ -61,5 +61,6 @@
     <string name="errParola">Introduceti parola</string>
     <string name="errInregistrare">Nu s-a putut realiza inregistrarea. Incercati din nou!</string>
     <string name="user_button">User</string>
-
+    <string name="nume_parola_gresita">Nume sau parola gresita!</string>
+    <string name="te_rugam_sa_te_loggezi">Te rugam sa te loghezi</string>
 </resources>

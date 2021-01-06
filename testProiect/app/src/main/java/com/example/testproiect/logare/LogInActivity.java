@@ -41,7 +41,7 @@ public class LogInActivity extends AppCompatActivity {
         initializareComponente();
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        mFirebaseAuth=FirebaseAuth.getInstance();
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -51,11 +51,12 @@ public class LogInActivity extends AppCompatActivity {
                 if (mFirebaseUser != null) {
                     moveToHomeActivity(mFirebaseUser);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Te rugam sa te loghezi", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.te_rugam_sa_te_loggezi, Toast.LENGTH_LONG).show();
                 }
-                }
+            }
 
         };
+
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,13 +72,26 @@ public class LogInActivity extends AppCompatActivity {
                 } else if (user.isEmpty() && parola.isEmpty()) {
                     Toast.makeText(LogInActivity.this, R.string.validare_campuri, Toast.LENGTH_SHORT).show();
                 } else if (!(user.isEmpty() && parola.isEmpty())) {
-                    mFirebaseAuth.signInWithEmailAndPassword(user, parola).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
+//                    mFirebaseAuth.signInWithEmailAndPassword(user, parola).addOnCompleteListener(LogInActivity.this, new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                            if (!task.isSuccessful()) {
+//                                Toast.makeText(LogInActivity.this, R.string.eroare_autentificare, Toast.LENGTH_SHORT).show();
+//                            } else {
+//                                moveToHomeActivity(task.getResult().getUser());
+//                            }
+//                        }
+//                    });
+                    mFirebaseAuth.signInWithEmailAndPassword(user, parola).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (!task.isSuccessful()) {
-                                Toast.makeText(LogInActivity.this, R.string.eroare_autentificare, Toast.LENGTH_SHORT).show();
+                            if (task.isSuccessful()) {
+
+                                startActivity(new Intent(LogInActivity.this, MainActivity.class));
+
                             } else {
-                                moveToHomeActivity(task.getResult().getUser());
+
+                                Toast.makeText(LogInActivity.this, R.string.nume_parola_gresita, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -88,6 +102,7 @@ public class LogInActivity extends AppCompatActivity {
 
             }
         });
+
 
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,13 +121,6 @@ public class LogInActivity extends AppCompatActivity {
         tvRegister = findViewById(R.id.tvCreeazaCont);
     }
 
-
-        @Override
-        protected void onStart() {
-            super.onStart();
-            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
-        }
-
     private void moveToHomeActivity(FirebaseUser mFirebaseUser) {
 
         firebaseDatabase.getReference().child(mFirebaseUser.getUid())
@@ -130,7 +138,6 @@ public class LogInActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
 
                     }
                 });

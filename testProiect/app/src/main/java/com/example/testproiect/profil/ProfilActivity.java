@@ -18,7 +18,6 @@ public class ProfilActivity extends AppCompatActivity {
     public static final String PRENUME = "prenume";
     public static final String ID_SEX_TYPE = "id_sex_type";
 
-
     private EditText etNume, etPrenume;
     private RadioGroup rgSextype;
     private Button btnSalvare;
@@ -26,14 +25,12 @@ public class ProfilActivity extends AppCompatActivity {
     //obiect utilizat pentru a reprezenta un fisier de preferinte incarcat in memorie
     private SharedPreferences preferences;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
 
         initializareComponente();
-
     }
 
     private void initializareComponente(){

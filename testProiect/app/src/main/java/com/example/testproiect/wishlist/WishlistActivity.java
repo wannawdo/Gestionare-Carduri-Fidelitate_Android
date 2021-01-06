@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testproiect.R;
 import com.example.testproiect.asyncTask.Callback;
+import com.example.testproiect.grafic.GraficActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ public class WishlistActivity extends AppCompatActivity {
 
     private ListView lvWishlist;
     private FloatingActionButton fabAddWishlist;
+    private Button btnGrafic;
 
     private List<Wishlist> wishlist = new ArrayList<>();
     private WishlistOperations wishlistOperations;
@@ -33,6 +36,7 @@ public class WishlistActivity extends AppCompatActivity {
         initComponents();
         wishlistOperations = new WishlistOperations(getApplicationContext());
         wishlistOperations.getAll(getAllFromDbCallback());
+        btnGrafic.setOnClickListener(veziGrafic());
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -108,6 +112,8 @@ public class WishlistActivity extends AppCompatActivity {
     private void initComponents() {
         lvWishlist = findViewById(R.id.lv_wishlist);
         fabAddWishlist = findViewById(R.id.fab_add_wishlist);
+        btnGrafic=findViewById(R.id.buttonGrafic);
+
         addAdapter();
         fabAddWishlist.setOnClickListener(addExpenseEventListener());
         lvWishlist.setOnItemClickListener(updateEventListener());
@@ -154,5 +160,19 @@ public class WishlistActivity extends AppCompatActivity {
     private void notifyAdapter() {
         WishlistAdapter adapter = (WishlistAdapter) lvWishlist.getAdapter();
         adapter.notifyDataSetChanged();
+    }
+
+    private View.OnClickListener veziGrafic(){
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Wishlist> list = new ArrayList<>();
+                for (Wishlist w : wishlist)
+                    list.add(w);
+                Intent intent = new Intent(WishlistActivity.this, GraficActivity.class);
+                intent.putExtra("list", list);
+                startActivity(intent);
+            }
+        };
     }
 }
