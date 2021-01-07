@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/colorAccent"
     tools:context=".grafic.GraficActivity">
 
     <LinearLayout
         android:id="@+id/layoutBar"
+        android:background="#ffffff"
         android:orientation="horizontal"
         android:layout_width="500dp"
         android:layout_height="500dp"/>

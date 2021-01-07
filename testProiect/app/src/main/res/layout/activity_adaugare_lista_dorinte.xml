@@ -43,33 +43,38 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tiet_add_denumire_produs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="363dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:background="@drawable/colturi_rotunjite"
         android:hint="@string/denumire_produs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_add_denumire_produs" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tiet_add_pret_produs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="363dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/colturi_rotunjite"
         android:hint="@string/pret_produs"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_add_pret_produs" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/tiet_add_denumire_magazin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_width="363dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:background="@drawable/colturi_rotunjite"
         android:hint="@string/denumire_magazin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_add_denumire_magazin" />
 
@@ -78,7 +83,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -92,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -130,10 +135,10 @@
         android:layout_height="87dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewSus"
-        app:layout_constraintVertical_bias="0.484"
+        app:layout_constraintVertical_bias="0.787"
         app:srcCompat="@drawable/ic_baseline_list_alt_27" />
 
     <ImageButton
@@ -148,6 +153,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiet_add_pret_produs"
         app:layout_constraintVertical_bias="0.175" />
+
+    <TextView
+        android:id="@+id/tvAdaugaInLista"
+        android:layout_width="287dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+
+        android:text="Adauga un produs in lista"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

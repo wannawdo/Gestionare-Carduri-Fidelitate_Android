@@ -50,7 +50,7 @@
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_person_pin_24"
@@ -66,24 +66,40 @@
         app:layout_goneMarginTop="40dp" />
 
     <EditText
-        android:id="@+id/etEMail"
+        android:id="@+id/etParola"
         android:layout_width="321dp"
-        android:layout_height="57dp"
+        android:layout_height="58dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
-        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawableStart="@drawable/ic_parola"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="E-Mail"
-        android:inputType="textPersonName"
+        android:hint="Parola"
+        android:inputType="textPassword"
         android:padding="20dp"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNume"
-        app:layout_goneMarginTop="40dp" />
+        app:layout_constraintTop_toBottomOf="@+id/etEMail" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="347dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/buton_rotunjit"
+        android:text="Creeaza cont nou"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etParola" />
 
     <EditText
         android:id="@+id/etNume"
@@ -105,6 +121,40 @@
         app:layout_constraintTop_toBottomOf="@+id/etUser"
         app:layout_goneMarginTop="40dp" />
 
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/ai_deja_un_cont_acceseaza_l_acum"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etEMail"
+        android:layout_width="321dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/colturi_rotunjite"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="E-Mail"
+        android:inputType="textPersonName"
+        android:padding="20dp"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNume"
+        app:layout_goneMarginTop="40dp" />
+
     <View
         android:id="@+id/viewAlbastruInchis"
         android:layout_width="0dp"
@@ -115,25 +165,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewSus" />
 
-
-    <EditText
-        android:id="@+id/etParola"
-        android:layout_width="321dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/colturi_rotunjite"
-        android:drawableStart="@drawable/ic_parola"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:hint="Parola"
-        android:inputType="textPassword"
-        android:padding="20dp"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEMail" />
 
     <View
         android:id="@+id/viewAlbastruDeschis"
@@ -157,36 +188,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="347dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/buton_rotunjit"
-        android:text="Creeaza cont nou"
-        android:textColor="#ffffff"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etParola" />
-
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/ai_deja_un_cont_acceseaza_l_acum"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

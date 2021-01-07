@@ -57,7 +57,7 @@ public class WishlistAdapter extends ArrayAdapter<Wishlist> {
         TextView textView = view.findViewById(com.example.testproiect.R.id.tvPret);
 
         if (pret != null) {
-            addTextViewContent(textView, pret.toString());
+            addTextViewContent(textView, pret.toString() + " RON");
         }
 
     }

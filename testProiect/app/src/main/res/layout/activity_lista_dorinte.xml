@@ -57,7 +57,8 @@
             android:id="@+id/lv_wishlist"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="10dp"
             android:divider="@android:color/transparent"
@@ -66,8 +67,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewAlbastruInchis3"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/viewSus3" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_add_wishlist"
@@ -100,6 +100,7 @@
             android:layout_marginBottom="4dp"
             android:text="@string/apasa_aici_pentru_a_adauga_un_nou_produs_in_lista"
             android:textSize="18dp"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/fab_add_wishlist"
             app:layout_constraintHorizontal_bias="0.846"
@@ -148,6 +149,7 @@
         android:id="@+id/textViewTitluListaDorinte"
         android:layout_width="315dp"
         android:layout_height="38dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/lista_ta_de_produse_dorite"
         android:textColor="#ffffff"

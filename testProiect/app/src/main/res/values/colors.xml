@@ -9,4 +9,5 @@
     <color name="colorTrendingStart">#0099FF</color>
     <color name="colorTrendingEnd">#a2d9ff</color>
     <color name="colorDivided">#D6D6D6</color>
+    <color name="colorText">#B50B0B43</color>
 </resources>

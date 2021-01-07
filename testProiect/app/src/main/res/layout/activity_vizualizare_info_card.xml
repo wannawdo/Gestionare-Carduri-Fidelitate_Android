@@ -111,7 +111,7 @@
         android:layout_height="52dp"
         android:layout_marginBottom="28dp"
         android:text="@string/pentru_a_adauga_un_card_nou_apasa_click_aici"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorText"
         android:textSize="20dp"
 
         app:layout_constraintBottom_toBottomOf="parent"

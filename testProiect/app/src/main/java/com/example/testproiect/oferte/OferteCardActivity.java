@@ -53,7 +53,7 @@ public class OferteCardActivity extends AppCompatActivity {
         return new Callback<String>() {
             @Override
             public void runResultOnUiThread(String result) {
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
                 oferte.addAll(OferteJsonParser.fromJson(result));
 
                 notifyAdapter();

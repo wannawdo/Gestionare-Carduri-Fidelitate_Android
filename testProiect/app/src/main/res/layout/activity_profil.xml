@@ -75,7 +75,7 @@
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_person_24"
@@ -140,7 +140,7 @@
         android:id="@+id/buttonSalvare"
         android:layout_width="258dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/buton_rotunjit"
         android:text="Salvare"
         android:textColor="#ffffff"
@@ -155,7 +155,7 @@
         android:id="@+id/buttonVizualizareDateProfil"
         android:layout_width="322dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/buton_rotunjit"
         android:text="@string/apasa_aici_pentru_a_vizualiza_datele_profilului_tau"
         android:textColor="#ffffff"
@@ -164,7 +164,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View

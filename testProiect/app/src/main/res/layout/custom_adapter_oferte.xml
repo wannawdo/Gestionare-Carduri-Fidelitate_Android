@@ -34,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:id="@+id/tvValabilitateOferta"/>
+            android:id="@+id/tvValabilitateOferta"
+            android:layout_marginBottom="5dp"/>
     </LinearLayout>
 
 </LinearLayout>
