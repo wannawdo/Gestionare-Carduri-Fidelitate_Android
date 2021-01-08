@@ -46,33 +46,33 @@ public class InfoProfilActivity extends AppCompatActivity {
         });
 
         user = FirebaseAuth.getInstance().getCurrentUser();
- //       referinta = FirebaseDatabase.getInstance().getReference("Profil");
+        referinta = FirebaseDatabase.getInstance().getReference("Profil");
         userId = user.getUid();
 
         tvUser = findViewById(R.id.tvgetUserCont);
         tvNume = findViewById(R.id.tvgetNumeCont);
 
-//        referinta.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                User profilUser = snapshot.getValue(User.class);
-//
-//                if (profilUser != null) {
-//
-//                    String nume = profilUser.getNume();
-//                    String user = profilUser.getUsername();
-//
-//                    tvNume.setText(user);
-//                    tvUser.setText(nume);
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(InfoProfilActivity.this, R.string.eroare, Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        referinta.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User profilUser = snapshot.getValue(User.class);
+
+                if (profilUser != null) {
+
+                    String nume = profilUser.getNume();
+                    String user = profilUser.getUsername();
+
+                    tvNume.setText(user);
+                    tvUser.setText(nume);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(InfoProfilActivity.this, R.string.eroare, Toast.LENGTH_SHORT).show();
+            }
+        });
 
    }
 }

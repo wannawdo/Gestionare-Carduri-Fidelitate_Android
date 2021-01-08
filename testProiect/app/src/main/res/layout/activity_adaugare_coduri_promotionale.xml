@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".wishlist.AddWishlistActivity"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".coduri.promotionale.AddCodPromotionalActivity">
+
     <View
         android:id="@+id/viewSus"
         android:layout_width="0dp"
@@ -12,7 +13,7 @@
         android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -28,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/viewSus" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_add_denumire_produs"
+        android:id="@+id/til_add_cod_promotional"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -42,32 +43,32 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiet_add_denumire_produs"
+        android:id="@+id/tiet_add_cod_promotional"
         android:layout_width="363dp"
         android:layout_height="61dp"
         android:layout_marginTop="12dp"
         android:textAlignment="center"
         android:background="@drawable/colturi_rotunjite"
-        android:hint="@string/denumire_produs"
+        android:hint="@string/cod_promotional"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_add_denumire_produs" />
+        app:layout_constraintTop_toBottomOf="@+id/til_add_cod_promotional" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiet_add_pret_produs"
+        android:id="@+id/tiet_add_reducere"
         android:layout_width="363dp"
         android:layout_height="61dp"
         android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:background="@drawable/colturi_rotunjite"
-        android:hint="@string/pret_produs"
+        android:hint="@string/reducere"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/til_add_pret_produs" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/tiet_add_denumire_magazin"
+        android:id="@+id/tiet_add_magazin"
         android:layout_width="363dp"
         android:layout_height="61dp"
         android:layout_marginTop="10dp"
@@ -88,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiet_add_denumire_produs">
+        app:layout_constraintTop_toBottomOf="@+id/tiet_add_cod_promotional">
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiet_add_denumire_magazin">
+        app:layout_constraintTop_toBottomOf="@+id/tiet_add_magazin">
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,7 +131,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivCod"
         android:layout_width="110dp"
         android:layout_height="87dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSus"
@@ -138,11 +139,11 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewSus"
-        app:layout_constraintVertical_bias="0.787"
-        app:srcCompat="@drawable/ic_baseline_list_alt_27" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <ImageButton
-        android:id="@+id/ibtn_add_produs_dorit"
+        android:id="@+id/ibtn_add_cod_promo"
         android:layout_width="89dp"
         android:layout_height="96dp"
         android:background="@android:color/transparent"
@@ -151,21 +152,23 @@
         app:layout_constraintBottom_toBottomOf="@+id/viewAlbastruDeschis"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiet_add_pret_produs"
+        app:layout_constraintTop_toBottomOf="@+id/tiet_add_reducere"
         app:layout_constraintVertical_bias="0.175" />
 
     <TextView
-        android:id="@+id/tvAdaugaInLista"
-        android:layout_width="287dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/tvAdaugaOferta"
+        android:layout_width="322dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="45dp"
 
-        android:text="@string/adauga_un_produs_in_lista"
+        android:text="Adauga un cod promotional"
         android:textColor="#ffffff"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/viewSus"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

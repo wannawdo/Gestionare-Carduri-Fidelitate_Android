@@ -46,31 +46,31 @@ public class WishlistOperations {
         taskRunner.executeAsync(callable, callback);
     }
 
-    public void update(Callback<Wishlist> callback, final Wishlist expense) {
+    public void update(Callback<Wishlist> callback, final Wishlist w) {
         Callable<Wishlist> callable = new Callable<Wishlist>() {
             @Override
             public Wishlist call() {
-                if (expense == null) {
+                if (w == null) {
                     return null;
                 }
-                int count = wishlistDAO.update(expense);
+                int count = wishlistDAO.update(w);
                 if (count < 1) {
                     return null;
                 }
-                return expense;
+                return w;
             }
         };
         taskRunner.executeAsync(callable, callback);
     }
 
-    public void delete(Callback<Integer> callback, final Wishlist expense) {
+    public void delete(Callback<Integer> callback, final Wishlist wl) {
         Callable<Integer> callable = new Callable<Integer>() {
             @Override
             public Integer call() {
-                if (expense == null) {
+                if (wl == null) {
                     return -1;
                 }
-                return wishlistDAO.delete(expense);
+                return wishlistDAO.delete(wl);
             }
         };
         taskRunner.executeAsync(callable, callback);

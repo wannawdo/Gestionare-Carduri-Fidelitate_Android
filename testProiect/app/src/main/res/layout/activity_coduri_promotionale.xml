@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coduri.promotionale.CodPromotionalActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/viewSus"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <View
+        android:id="@+id/viewAlbastruInchis"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:background="@drawable/wavesus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSus" />
+
+    <TextView
+        android:id="@+id/tvCoduriPromotionale"
+        android:layout_width="260dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/coduri_promotionale_existente"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewSus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewSus"
+        app:layout_constraintVertical_bias="0.579"></TextView>
+
+    <ListView
+        android:id="@+id/lv_coduri_promotionale"
+        android:layout_width="match_parent"
+        android:layout_height="412dp"
+        android:layout_marginBottom="91dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewAlbastruDeschis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewAlbastruInchis"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_cod_promotional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewAlbastruDeschis"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/wavesus_deschis"
+        app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <View
+        android:id="@+id/viewSusdeschis"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonVizualizareDateProfil"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/dollarimg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/tvCoduriPromotionale"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+    <TextView
+        android:id="@+id/tvAdaugaprodusnou"
+        android:layout_width="253dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/apasa_aici_pentru_a_adauga_un_cod_nou"
+        android:textColor="@color/colorText"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fab_add_cod_promotional"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

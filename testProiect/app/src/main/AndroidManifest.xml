@@ -12,10 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"   android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".logare.LogInActivity">
+        <activity android:name=".logare.LogInActivity"   android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,19 +26,21 @@
 
         </activity>
 
-        <activity android:name=".oferte.OferteCardActivity"></activity>
-        <activity android:name=".card.InfoCardActivity">
+        <activity android:name=".oferte.OferteCardActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".card.InfoCardActivity"   android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".profil.ProfilActivity"></activity>
-        <activity android:name=".card.AdaugareCardActivity"></activity>
-        <activity android:name=".magazine.partenere.InfoMagazinePartenereActivity"></activity>
-        <activity android:name=".magazine.partenere.MagazinePartenereActivity"></activity>
-        <activity android:name=".wishlist.WishlistActivity"></activity>
-        <activity android:name=".wishlist.AddWishlistActivity"></activity>
-        <activity android:name=".grafic.GraficActivity"></activity>
-        <activity android:name=".AboutActivity"></activity>
-        <activity android:name=".profil.InfoProfilActivity"></activity>
+        <activity android:name=".profil.ProfilActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".card.AdaugareCardActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".magazine.partenere.InfoMagazinePartenereActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".magazine.partenere.MagazinePartenereActivity"   android:screenOrientation="portrait" ></activity>
+        <activity android:name=".wishlist.WishlistActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".wishlist.AddWishlistActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".grafic.GraficActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".AboutActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".profil.InfoProfilActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".coduri.promotionale.CodPromotionalActivity"   android:screenOrientation="portrait"></activity>
+        <activity android:name=".coduri.promotionale.AddCodPromotionalActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

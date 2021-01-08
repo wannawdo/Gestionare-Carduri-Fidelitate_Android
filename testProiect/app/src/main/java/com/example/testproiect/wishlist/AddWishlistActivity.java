@@ -3,7 +3,6 @@ package com.example.testproiect.wishlist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -12,10 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.testproiect.R;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.Date;
-
 public class AddWishlistActivity extends AppCompatActivity {
-    public static final String WISHLIST_KEY = "expenseKey";
+    public static final String COD_KEY = "wishlistKey";
     private TextInputEditText tietNumeProdus;
     private TextInputEditText tietNumeMagazin;
     private TextInputEditText tietPret;
@@ -32,8 +29,8 @@ public class AddWishlistActivity extends AppCompatActivity {
 
         initComponents();
         intent = getIntent();
-        if (intent.hasExtra(WISHLIST_KEY)) {
-            wishlist = (Wishlist) intent.getSerializableExtra(WISHLIST_KEY);
+        if (intent.hasExtra(COD_KEY)) {
+            wishlist = (Wishlist) intent.getSerializableExtra(COD_KEY);
             buildViewsFromWishlist(wishlist);
         }
     }
@@ -70,7 +67,7 @@ public class AddWishlistActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (validate()) {
                     createFromViews();
-                    intent.putExtra(WISHLIST_KEY, wishlist);
+                    intent.putExtra(COD_KEY, wishlist);
                     setResult(RESULT_OK, intent);
                     finish();
                 }

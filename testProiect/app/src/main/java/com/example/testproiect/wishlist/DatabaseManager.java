@@ -8,8 +8,11 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 import com.example.testproiect.card.DateConverter;
+import com.example.testproiect.coduri.promotionale.CodPromotional;
+import com.example.testproiect.coduri.promotionale.CodPromotionalDAO;
 
-@Database(entities = {Wishlist.class}, exportSchema = false, version = 1)
+@Database(entities = {Wishlist.class, CodPromotional.class}, exportSchema = false, version = 2)
+
 
 public abstract class DatabaseManager extends RoomDatabase {
     private static final String DAM_DB = "dam_db";
@@ -29,4 +32,6 @@ public abstract class DatabaseManager extends RoomDatabase {
     }
 
     public abstract WishlistDAO getWishlistDao();
+    public abstract CodPromotionalDAO getCodPromotionalDao();
+
 }

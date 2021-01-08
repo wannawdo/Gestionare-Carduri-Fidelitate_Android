@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Gestionare Carduri Fidelitate</string>
+    <string name="app_name">FidelCard</string>
     <string name="intra_in_cont">Intra in cont</string>
     <string name="introdu_datele_pentru_a_intra_in_cont">Introdu datele pentru a accesa contul</string>
     <string name="nu_ai_un_cont_creeaza_l_acum">Nu ai un cont? Creeaza-l acum!</string>
@@ -65,4 +65,12 @@
     <string name="te_rugam_sa_te_loggezi">Te rugam sa te loghezi</string>
     <string name="apasa_aici_pentru_a_vizualiza_datele_profilului_tau">Apasa aici pentru a vizualiza datele profilului tau</string>
     <string name="apasa_aici_pentru_a_te_deconecta">Apasa aici pentru a te deconecta</string>
+    <string name="coduri_promotionale_existente">Coduri promotionale existente</string>
+    <string name="apasa_aici_pentru_a_adauga_un_cod_nou">Apasa aici pentru a adauga un cod nou:</string>
+    <string name="cod_promotional">Cod promotional</string>
+    <string name="reducere">Reducere (%)</string>
+    <string name="adauga_un_produs_in_lista">Adauga un produs in lista</string>
+    <string name="err_cod_promo">Te rugam sa adaugi un cod promotional</string>
+    <string name="err_reducere">Reducerea nu este valida!</string>
+    <string name="coduri_promotionale">CODURI PROMOTIONALE</string>
 </resources>

@@ -2,7 +2,6 @@ package com.example.testproiect.wishlist;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -42,7 +41,7 @@ public class WishlistActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && data != null) {
-            Wishlist expense = (Wishlist) data.getSerializableExtra(AddWishlistActivity.WISHLIST_KEY);
+            Wishlist expense = (Wishlist) data.getSerializableExtra(AddWishlistActivity.COD_KEY);
             if (requestCode == ADD_WISHLIST_REQUEST_CODE) {
                 wishlistOperations.insert(insertIntoDbCallback(), expense);
             } else if (requestCode == UPDATE_WISHLIST_REQUEST_CODE) {
@@ -125,7 +124,7 @@ public class WishlistActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), AddWishlistActivity.class);
-                intent.putExtra(AddWishlistActivity.WISHLIST_KEY, wishlist.get(position));
+                intent.putExtra(AddWishlistActivity.COD_KEY, wishlist.get(position));
                 startActivityForResult(intent, UPDATE_WISHLIST_REQUEST_CODE);
             }
         };
@@ -152,7 +151,7 @@ public class WishlistActivity extends AppCompatActivity {
     }
 
     private void addAdapter() {
-        WishlistAdapter adapter = new WishlistAdapter(getApplicationContext(), R.layout.listview_wishlist_items,
+        WishlistAdapter adapter = new WishlistAdapter(getApplicationContext(), R.layout.custom_adapter_wishlist_items,
                 wishlist, getLayoutInflater());
         lvWishlist.setAdapter(adapter);
     }
