@@ -62,7 +62,7 @@
         android:drawableStart="@drawable/ic_baseline_person_pin_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Prenume"
+        android:hint="@string/prenume"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textSize="14dp"
@@ -81,7 +81,7 @@
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Nume"
+        android:hint="@string/nume"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textSize="14dp"
@@ -142,7 +142,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/buton_rotunjit"
-        android:text="Salvare"
+        android:text="@string/salvare"
         android:textColor="#ffffff"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -157,7 +157,7 @@
         android:layout_height="46dp"
         android:layout_marginBottom="148dp"
         android:background="@drawable/buton_rotunjit"
-        android:text="@string/apasa_aici_pentru_a_vizualiza_datele_profilului_tau"
+        android:text="@string/apasa_aici_pentru_a_te_deconecta"
         android:textColor="#ffffff"
         android:textSize="18dp"
 
@@ -187,7 +187,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="@+id/buttonVizualizareDateProfil"
         app:layout_constraintVertical_bias="1.0" />
 

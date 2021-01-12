@@ -59,7 +59,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="Magazinele partenere"
+                android:hint="@string/magazinele_partenere"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:paddingStart="15dp"

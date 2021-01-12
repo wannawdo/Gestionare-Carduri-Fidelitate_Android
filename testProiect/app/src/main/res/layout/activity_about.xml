@@ -49,7 +49,6 @@
             android:layout_height="70dp"
             android:background="@drawable/wavesus_deschis"
             app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis2"
-
             app:layout_constraintStart_toStartOf="parent" />
 
         <View
@@ -82,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Dragomirescu Oana-Alexandra"
+            android:text="@string/dragomirescu_oana_alexandra"
             android:textSize="18dp"
             android:textColor="@color/colorText"
             android:textStyle="bold"
@@ -111,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:textColor="@color/colorText"
-            android:text="Grupa 1080, Seria C"
+            android:text="@string/grupa_1080_seria_c"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

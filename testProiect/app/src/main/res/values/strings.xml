@@ -73,4 +73,34 @@
     <string name="err_cod_promo">Te rugam sa adaugi un cod promotional</string>
     <string name="err_reducere">Reducerea nu este valida!</string>
     <string name="coduri_promotionale">CODURI PROMOTIONALE</string>
+    <string name="datele_profilului">DATELE PROFILULUI</string>
+    <string name="inregistrare_succes">Inregistrarea a fost efectuata cu succes!</string>
+    <string name="err_inreg">Nu s-a putut realiza inregistrarea!</string>
+    <string name="err_executeAsynk">eroare la executeAsync</string>
+    <string name="dragomirescu_oana_alexandra">Dragomirescu Oana-Alexandra</string>
+    <string name="grupa_1080_seria_c">Grupa 1080, Seria C</string>
+    <string name="adauga_un_cod_promotional">Adauga un cod promotional</string>
+    <string name="vizualizare_grafic_magazine">Vizualizare grafic magazine</string>
+    <string name="vezi_site_uri_magazine">Vezi site-uri magazine</string>
+    <string name="magazinele_partenere">Magazinele partenere</string>
+    <string name="prenume">Prenume</string>
+    <string name="nume">Nume</string>
+    <string name="salvare">Salvare</string>
+    <string name="id_card">ID Card</string>
+    <string name="user">User</string>
+    <string name="parola">Parola</string>
+    <string name="creeaza_cont_nou">Creeaza cont nou</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="cod">Cod</string>
+    <string name="magazin">Magazin</string>
+    <string name="reduceree">Reducere</string>
+    <string name="denumire_produss">DENUMIRE PRODUS</string>
+    <string name="denumire_magazinn">DENUMIRE MAGAZIN</string>
+    <string name="pret">PRET</string>
+    <string name="titlu_oferta">TITLU OFERTA</string>
+    <string name="text_oferta">TEXT OFERTA</string>
+    <string name="valabilitate_oferta">VALABILITATE OFERTA</string>
+    <string name="nume_magazin">Nume magazin</string>
+
+
 </resources>

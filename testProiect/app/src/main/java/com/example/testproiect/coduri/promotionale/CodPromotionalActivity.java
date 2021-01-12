@@ -45,11 +45,11 @@ public class CodPromotionalActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && data != null) {
-            CodPromotional expense = (CodPromotional) data.getSerializableExtra(AddCodPromotionalActivity.KEY_CODE);
+            CodPromotional cp = (CodPromotional) data.getSerializableExtra(AddCodPromotionalActivity.KEY_CODE);
             if (requestCode == ADD_COD_PROMO_REQUEST_CODE) {
-                cpOperations.insert(insertIntoDbCallback(), expense);
+                cpOperations.insert(insertIntoDbCallback(), cp);
             } else if (requestCode == UPDATE_COD_PROMO_REQUEST_CODE) {
-                cpOperations.update(updateToDbCallback(), expense);
+                cpOperations.update(updateToDbCallback(), cp);
             }
         }
     }
@@ -119,7 +119,7 @@ public class CodPromotionalActivity extends AppCompatActivity {
 
 
         addAdapter();
-        fabAddCodPromo.setOnClickListener(addExpenseEventListener());
+        fabAddCodPromo.setOnClickListener(addCodPromoEventListener());
         lvCodPromo.setOnItemClickListener(updateEventListener());
         lvCodPromo.setOnItemLongClickListener(deleteEventListener());
     }
@@ -145,7 +145,7 @@ public class CodPromotionalActivity extends AppCompatActivity {
         };
     }
 
-    private View.OnClickListener addExpenseEventListener() {
+    private View.OnClickListener addCodPromoEventListener() {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {

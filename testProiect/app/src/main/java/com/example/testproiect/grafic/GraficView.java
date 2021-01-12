@@ -52,9 +52,9 @@ public class GraficView extends View {
             for (int i = 0; i < labels.size(); i++) {
                 //determinam o culoare aleator
                 int color = Color.argb(100,
-                        1 + random.nextInt(254),
-                        1 + random.nextInt(254),
-                        1 + random.nextInt(254));
+                        0,
+                        0,
+                        255);
                 paint.setColor(color);
 
                 float x1 = paddW + i * widthOfElement;

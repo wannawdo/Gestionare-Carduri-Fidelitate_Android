@@ -54,7 +54,7 @@
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Nume"
+        android:hint="@string/nume"
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textSize="14dp"
@@ -110,7 +110,7 @@
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="ID Card"
+        android:hint="@string/id_card"
         android:inputType="date"
         android:padding="20dp"
         android:textSize="14dp"
@@ -127,7 +127,6 @@
         android:layout_width="321dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
-
         android:background="@drawable/colturi_rotunjite"
         android:ems="10"
         android:paddingLeft="20dp"
@@ -141,9 +140,7 @@
         android:layout_height="57dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-
         android:layout_marginTop="30dp"
-
         android:background="@drawable/colturi_rotunjite"
         android:drawableStart="@drawable/ic_baseline_credit_card_blue"
         android:drawablePadding="16dp"
@@ -152,10 +149,7 @@
         android:inputType="textPersonName"
         android:padding="20dp"
         android:textSize="14dp"
-
-
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerNumeMagazin"
         app:layout_goneMarginTop="40dp" />
@@ -177,7 +171,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/etDataEliberare"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -185,7 +178,6 @@
         android:id="@+id/viewAlbastruInchis"
         android:layout_width="0dp"
         android:layout_height="60dp"
-
         android:background="@drawable/wavesus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

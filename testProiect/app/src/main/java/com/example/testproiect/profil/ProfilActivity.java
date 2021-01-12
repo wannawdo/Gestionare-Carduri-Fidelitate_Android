@@ -11,7 +11,9 @@ import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.testproiect.R;
+import com.example.testproiect.logare.LogInActivity;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfilActivity extends AppCompatActivity {
     public static final String PROFIL_SHARED_PREF = "ProfilSharedPref";
@@ -48,8 +50,8 @@ public class ProfilActivity extends AppCompatActivity {
         btnInfoProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent veziProfil = new Intent(ProfilActivity.this, InfoProfilActivity.class);
-                startActivity(veziProfil);
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(ProfilActivity.this, LogInActivity.class));
             }
         });
     }

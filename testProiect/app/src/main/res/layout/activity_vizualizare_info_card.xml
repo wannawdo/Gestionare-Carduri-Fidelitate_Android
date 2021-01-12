@@ -47,7 +47,6 @@
         android:id="@+id/viewAlbastruInchis"
         android:layout_width="0dp"
         android:layout_height="60dp"
-
         android:background="@drawable/wavesus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -101,7 +100,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.834"
         app:layout_constraintStart_toStartOf="@+id/viewSusdeschis"
-
         android:src="@drawable/ic_baseline_add_circle_24"
         android:background="@drawable/colturi_rotunjite"/>
 
@@ -113,7 +111,6 @@
         android:text="@string/pentru_a_adauga_un_card_nou_apasa_click_aici"
         android:textColor="@color/colorText"
         android:textSize="20dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
         app:layout_constraintHorizontal_bias="1.0"

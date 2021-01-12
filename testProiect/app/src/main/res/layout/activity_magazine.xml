@@ -29,7 +29,6 @@
             android:id="@+id/viewAlbastruInchis3"
             android:layout_width="0dp"
             android:layout_height="80dp"
-
             android:background="@drawable/wavesus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -54,7 +53,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/buton_rotunjit"
             android:onClick="ActivitateSiteuri"
-            android:text="Vezi site-uri magazine"
+            android:text="@string/vezi_site_uri_magazine"
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:textStyle="bold"
@@ -69,7 +68,6 @@
             android:layout_height="50dp"
             android:background="@drawable/wavesus_deschis"
             app:layout_constraintBottom_toTopOf="@+id/viewSusdeschis2"
-
             app:layout_constraintStart_toStartOf="parent" />
 
         <View
@@ -101,7 +99,6 @@
         android:id="@+id/viewAlbastruInchis4"
         android:layout_width="0dp"
         android:layout_height="80dp"
-
         android:background="@drawable/wavesus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

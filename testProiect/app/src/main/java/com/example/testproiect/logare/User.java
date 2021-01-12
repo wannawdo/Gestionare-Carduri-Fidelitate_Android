@@ -4,13 +4,14 @@ public class User {
     private String username;
     private String nume;
 
-
     public User() {
 
     }
+
     public User(String username, String nume) {
         this.username = username;
         this.nume = nume;
+
     }
 
     public String getUsername() {
@@ -28,4 +29,5 @@ public class User {
     public void setNume(String nume) {
         this.nume = nume;
     }
+
 }

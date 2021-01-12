@@ -56,7 +56,7 @@ public class CoduriPromotionaleAdapter extends ArrayAdapter<CodPromotional> {
         TextView textView = view.findViewById(R.id.tvReducere);
 
         if (reducere != null) {
-            addTextViewContent(textView, reducere.toString() + " RON");
+            addTextViewContent(textView, reducere.toString() + " %");
         }
 
     }

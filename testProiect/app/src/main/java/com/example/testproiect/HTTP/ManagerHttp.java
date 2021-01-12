@@ -10,21 +10,18 @@ import java.net.URL;
 import java.util.concurrent.Callable;
 
 public class ManagerHttp implements Callable<String> {
-    //clase utilitare pentru conexiunea la retea
+    //conexiunea la retea
     private URL url;
     private HttpURLConnection connection;
 
-    //clase utilitare pentru preluarea informatiilor din retea
+    //preluare informatiilor din retea
     private InputStream inputStream;
     private InputStreamReader inputStreamReader;
     private BufferedReader bufferedReader;
-
     private final String urlAddress;
-
     public ManagerHttp(String urlAddress) {
         this.urlAddress = urlAddress;
     }
-
 
     @Override
     public String call() throws Exception {
@@ -35,8 +32,7 @@ public class ManagerHttp implements Callable<String> {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            //lucrand cu clase de tip .net ar trebui sa asiguram de fiecare data inchiderea acestora,
-            //pentru a evite aparitia de memory leak
+            //inchidem clasele pentru a evita memory leaks
             closeConnections();
         }
         return null;
